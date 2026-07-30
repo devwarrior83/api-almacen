@@ -1,0 +1,11 @@
+# Entorno de Python y cache
+venv/
+env/
+__pycache__/
+*.pyc
+
+# NO OLVIDAR las variables de entorno para no filtrar claves de MySQL
+.env
+
+# Archivos de sistma operativo
+.DS_Store
