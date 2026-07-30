@@ -3,3 +3,6 @@ fastapi
 uvicorn
 sqlalchemy
 pymysql
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart

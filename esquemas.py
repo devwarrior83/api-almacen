@@ -66,4 +66,18 @@ class MovimientoResponse(MovimientoCreate):
 
     class Config:
         from_attributes = True
+
+# Definicion de esquemas para recibir y enviar los datos de los uausrios
+class UsuarioBase(BaseModel):
+    username: str
+
+class UsuarioCreate(UsuarioBase):
+    password: str
+
+class UsuarioResponse(UsuarioBase):
+    id: int
+    activo: int
+
+    class Config:
+        from_attributes = True
         

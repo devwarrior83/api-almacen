@@ -52,3 +52,12 @@ class Movimiento(Base):
     fecha = Column(DateTime, default=datetime.datetime.utcnow)
 
     articulo = relationship("Articulo", back_populates="movimientos")
+
+class Usuario(Base):
+    __tablename__ = "usuarios"
+
+    id = Column(Integer, primary_key=True, index=True)
+    username = Column(String(50), unique=True, index=True)
+    hashed_password = Column(String(255))
+    activo = Column(Integer, default=1) # 1 para ACTIVO, 0 para INACTIVO
+    
